@@ -147,12 +147,6 @@ Node removeHeap(MinHeap* m)
         int leftChild = (2 * i) + 1;
         int rightChild = (2 * i) + 2;
 
-        
-        //values of shortest distances of "parrent" and "children"
-        int currentNode = m->tree[i].shortest;
-        int leftChildNode = m->tree[leftChild].shortest;
-        int rightChildNode = m->tree[rightChild].shortest;
-
         int smallest = parrent;
 
         //check if left child is smaller than parrent, and if it exist
@@ -207,8 +201,6 @@ SkiLift* readSkiLifts(int count)
 {
     //allocating array of Skilift data structure
     SkiLift* liftList = new SkiLift[count];
-
-    int counter = count;
 
     for (int i = 0; i < count; i++)
     {
@@ -476,7 +468,6 @@ int main()
 //========================================================================
 
 //========= MAIN FOR CHECKING MINHEAP ====================================
-/*
     MetaInfo dummyMeta;
     dummyMeta.width = 100;
     dummyMeta.height = 100;
